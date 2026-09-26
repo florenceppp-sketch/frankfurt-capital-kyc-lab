@@ -1,0 +1,22 @@
+# Python caches and compiled files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Personal editor settings
+.vscode/
+.idea/
