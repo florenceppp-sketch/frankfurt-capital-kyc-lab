@@ -7,5 +7,10 @@ def document_status_message(status):
     Use the exact messages specified in README.md for pending, accepted
     and resubmit. For any other string, return the support message.
     """
-    # TODO: Replace this placeholder with your implementation.
-    raise NotImplementedError("Implement document_status_message(status).")
+    messages = {
+        "pending": "Your document is awaiting review.",
+        "accepted": "Your document has been accepted.",
+        "resubmit": "Please submit a new document.",
+    }
+
+    return messages.get(status, "Please contact support.")
