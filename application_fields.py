@@ -9,5 +9,15 @@ def missing_required_fields(application):
     Other supplied values are strings. Ignore extra fields and leave the
     input dictionary unchanged. See README.md for the complete task.
     """
-    # TODO: Replace this placeholder with your implementation.
-    raise NotImplementedError("Implement missing_required_fields(application).")
+    required_fields = (
+        "full_name",
+        "date_of_birth",
+        "country_of_residence",
+    )
+    return [
+        field
+        for field in required_fields
+        if field not in application
+        or application[field] is None
+        or not application[field].strip()
+    ]
