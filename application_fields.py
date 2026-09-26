@@ -10,4 +10,18 @@ def missing_required_fields(application):
     input dictionary unchanged. See README.md for the complete task.
     """
     # TODO: Replace this placeholder with your implementation.
-    raise NotImplementedError("Implement missing_required_fields(application).")
+    required_fields = [
+        "full_name",
+        "date_of_birth",
+        "country_of_residence",
+    ]
+
+    missing = []
+
+    for field in required_fields:
+        value = application.get(field)
+
+        if value is None or value.strip() == "":
+            missing.append(field)
+
+    return missing
