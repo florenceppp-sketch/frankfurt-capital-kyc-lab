@@ -2,7 +2,7 @@
 
 
 def missing_required_fields(application):
-    """Return missing required field names in the specified order.
+    """Return missing required message field names in the specified order.
 
     Required fields: full_name, date_of_birth, country_of_residence.
     Missing means absent, None, an empty string, or whitespace-only text.
